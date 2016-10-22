@@ -18,7 +18,7 @@ public class Organizer {
 	public void siftHTML() {
 		Document parsedHTML = Jsoup.parse(rawHTML);
 		for (Element row : parsedHTML.getElementById("progress-card").select("tbody").select("tr")) {
-			if((!(row.getElementsByTag("td").get(1).text().contains("LUNCH")) && !(row.getElementsByTag("td").get(1).text().contains("EDUCATION")))) {
+			if((!(row.getElementsByTag("td").get(4).text().contains("-")) && !(row.getElementsByTag("td").get(1).text().contains("PHYS EDUCATION")))) {
 				classes.add(row.getElementsByTag("td").get(1).text()); //index 1 is the name of the course
 				grades.add(row.getElementsByTag("td").get(4).text().substring(4)); //index 4 is the average
 			}

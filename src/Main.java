@@ -14,7 +14,7 @@ public class Main {
 			myOrganizer.siftHTML(); //this method finalizes the data and outputs it
 		} else {
 			myLogin.createLogin(); //guides user into creating their local profile data
-			System.out.println("Run this program again!"); //didnt feel like redirecting to hasLoginInfo again
+			main(args); //didnt feel like redirecting to hasLoginInfo again
 			return; //force closing program
 		}
 	}
